@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel_Love</title>
+    <style>table, th, td {
+      border: 1px solid black;
+    }</style>
+</head>
+<body>
+    <nav class="navbar p-3 bg-primary shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+          <form class="d-flex" role="logout">
+            <a href="/logout/" class="btn btn-success" type="submit">logout</a>
+          </form>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <form class= "col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1>Add Place</h1>
+            <hr>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Place Name</label>
+              <input name="place_name" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Place Description</label>
+              <textarea name="place_description" class="form-control"></textarea> 
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Place Image</label>
+                <input  name="place_image"  type="file" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Add Place</button>
+          </form>
+          <hr>
+          <div class="mt-5">
+            <div class="mx-auto col-6">
+                <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Search Place</label>
+                    <input name="search" type="text" class="form-control">
+
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                </div>
+            
+                
+            </div>
+          </div>
+          <table class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">S no.</th>
+                <th scope="col">Place Name</th>
+                <th scope="col">Place Description</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            {% for Travel in travel    %}
+            <tbody>
+              <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{Travel.place_name}}</td>
+                <td>{{Travel.place_description}}</td>
+                <td>
+                  <img src = "/media/{{Travel.place_image}}" style="height: 100px;">
+                </td>
+                <td>
+                  <a href="{% url 'delete_travel' Travel.id %}" class="btn-danger m-2">Delete</a>
+                  |
+                  <a href="{% url 'update_travel' Travel.id %}" class="btn-success">Update</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>

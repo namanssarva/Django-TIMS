@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <style>table, th, td {
+      border: 1px solid black;
+    }</style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form class= "col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1>Update Place</h1>
+            <hr>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Place Name</label>
+              <input name="place_name" value="{{travel.place_name}}" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Place Description</label>
+              <textarea name="place_description" value="" class="form-control">{{travel.place_description}}</textarea> 
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Place Image</label>
+                <input  name="place_image"  type="file" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Update Place</button>
+          </form>
+    </div>
+</body>
+</html>
