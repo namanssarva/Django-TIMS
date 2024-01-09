@@ -17,17 +17,19 @@ Travel Information Management System is a web application(travel_love) using Dja
 - **Frontend:** HTML, CSS
 - **Database:** SQLite
 
-## Achievements
-
-- **CRUD System Implementation:** Successfully implemented a full-fledged CRUD (Create, Read, Update, Delete) system.
-- **Data Security:** Ensured data security through a robust user authentication mechanism.
-
 ## Getting Started
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone [repository-url]`
-2. Navigate to the project directory: `cd Django-TIMS`
-3. Install dependencies: `pip install django`
-4. Run the application: `python manage.py runserver`
+1. Clone the repository: `git clone https://github.com/namanssarva/Django-TIMS.git`
+2. Navigate to the project directory: `cd Django-TIMS/my_env`
+3. Activate Virtual env: `source ./bin/activate`
+4. Run the application: `python3 manage.py runserver`
 5. Access the application in your web browser: `http://localhost:8000`
+6. Stop Aplication: `Ctrl + c`
+7. Deactivate Virtual env: `deactivate`
+
+## CONCLUSION
+
+In conclusion, the Travel Information Management System excels with a robust CRUD system, ensuring seamless user interactions. The application prioritizes data security through effective user authentication. Notably, it achieves a bidirectional data flow between the frontend and backend, allowing for real-time information exchange. 
+This dynamic process facilitates efficient `creation`, `viewing`, `updating`, and `deletion` of travel information. Simultaneously `managing the database` underscores a commitment to streamlined data processing.
