@@ -13,7 +13,7 @@ Travel Information Management System is a web application(travel_love) using Dja
 
 ## Technologies Used
 
-- **Backend:** Python, Django
+- **Backend:** Python3, Django
 - **Frontend:** HTML, CSS
 - **Database:** SQLite
 
