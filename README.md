@@ -26,8 +26,10 @@ To run the project locally, follow these steps:
 3. Activate Virtual env: `source ./bin/activate`
 4. Run the application: `python3 manage.py runserver`
 5. Access the application in your web browser: `http://localhost:8000`
-6. Stop Aplication: `Ctrl + c`
-7. Deactivate Virtual env: `deactivate`
+6. After running the application you'll be redirect to the login page where you can find a  button named `Register` and it'll redirect you to register page where you can register yourself as a user  to access the data by creating account there and then you can login by clicking back to `login` button presented on the page.
+ OR you can simply put `admin` in username and `1234` in password.
+7. Stop Aplication: `Ctrl + c`
+8. Deactivate Virtual env: `deactivate`
 
 ## CONCLUSION
 
